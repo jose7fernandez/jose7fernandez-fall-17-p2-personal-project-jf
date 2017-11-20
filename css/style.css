@@ -203,7 +203,6 @@ https://stackoverflow.com/questions/9526970/can-the-twitter-bootstrap-carousel-p
                 opacity: .9;
                 color: #eae8e8;
                 border-radius: 20px;
-                margin-left: 0;
             }
             
             .services {
@@ -273,7 +272,7 @@ https://stackoverflow.com/questions/9526970/can-the-twitter-bootstrap-carousel-p
             }
             
             .subscribe {
-                background-color: transparent;
+                background-color: #eae8e8;
                 transition: .7s;
                 color: #3a3d42;
                 text-align: center;
@@ -332,6 +331,8 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
                 color: #3a3d42
             }
             /*End calendar styling*/
+            /**/
+            /**/
             /*Media Queries*/
             /**/
             /* Moves search button icon, out of Search field, due to "insurmountable" conflict with footer element at smaller screen widths*/
@@ -349,5 +350,62 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
                     padding-top: 100px;
                     margin: 0;
                     display: none;
+                }
+            }
+            /*Reduces size of logo*/
+            
+            @media(max-width: 640px) {
+                .navbar-brand,
+                img {
+                    width: 130px;
+                }
+            }
+            /*Cancels out background color on hover state*/
+            
+            @media(max-width: 740px) {
+                .navbar:hover {
+                    background-color: transparent;
+                    opacity: 1;
+                    transition: .1s;
+                }
+            }
+            /* SERVICES PAGE*/
+            
+            @media(max-width: 640px) {
+                #background-video {
+                    display: none;
+                }
+            }
+            
+            @media(max-width: 640px) {
+                .service-cap .services {
+                    background-color: #3a3d42;
+                    opacity: .9;
+                    width: 200px;
+                    margin-left: 50px;
+                    text-align: center;
+                    color: #eae8e8;
+                    border-radius: 20px;
+                }
+            }
+            
+            @media(max-width: 650px) {
+                .service-cap .services,
+                p .call-to-action {
+                    display: none
+                }
+            }
+            
+            @media(max-height: 640px) {
+                .service-cap .services,
+                p .call-to-action {
+                    display: none
+                }
+            }
+            /*CONTACT PAGE*/
+            
+            @media(max-width: 650px) {
+                .cps-contact-info {
+                    margin-bottom: 40px;
                 }
             }
