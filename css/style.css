@@ -462,6 +462,18 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
 
 /* SERVICES PAGE*/
 
+@media(max-width: 650px) {
+    #background-video {
+        display: none;
+    }
+}
+
+@media(max-height: 600px) {
+    #background-video {
+        display: none;
+    }
+}
+
 @media(max-width: 640px) {
     .service-cap .services {
         background-color: #3a3d42;
