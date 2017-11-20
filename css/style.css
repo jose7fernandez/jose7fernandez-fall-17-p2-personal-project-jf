@@ -220,9 +220,9 @@ footer {
 
 #background-video {
     position: fixed;
-    top: 50%;
+    top: 30%;
     Left: 50%;
-    height: 850px;
+    /*    height: 850px;*/
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
 }
