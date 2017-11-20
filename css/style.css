@@ -192,6 +192,7 @@ https://stackoverflow.com/questions/9526970/can-the-twitter-bootstrap-carousel-p
             .service-cap {
                 background-color: #3a3d42;
                 opacity: .9;
+                padding-top: 20px;
                 margin-bottom: 80px;
                 color: #eae8e8;
                 border-radius: 20px;
@@ -354,7 +355,7 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
             }
             /*Reduces size of logo*/
             
-            @media(max-width: 640px) {
+            @media(max-width: 990px) {
                 .navbar-brand,
                 img {
                     width: 130px;
@@ -362,7 +363,7 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
             }
             /*Cancels out background color on hover state*/
             
-            @media(max-width: 740px) {
+            @media(max-width: 990px) {
                 .navbar:hover {
                     background-color: transparent;
                     opacity: 1;
