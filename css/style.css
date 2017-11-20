@@ -1,412 +1,494 @@
-            /* Inspiration = https://www.masterdynamic.com
+/* Inspiration = https://www.masterdynamic.com
 Source code for carusel fade action:
 https://stackoverflow.com/questions/9526970/can-the-twitter-bootstrap-carousel-plugin-fade-in-and-out-on-slide-transition/*/
-            
-            body {
-                background-color: #3a3d42;
-                font-family: 'Roboto', sans-serif;
-                /*
+
+body {
+    background-color: #3a3d42;
+    font-family: 'Roboto', sans-serif;
+    /*
  font-family: 'Rajdhani', sans-serif;
                     font-size: 20px;
 */
-            }
-            /*Start carousel styling*/
-            
-            .carousel.fade {
-                opacity: 1;
-            }
-            
-            .carousel.fade .carousel-item {
-                transition: opacity ease-in-out 3.5s;
-                left: 0 !important;
-                opacity: 0;
-                top: 0;
-                position: absolute;
-                width: 100%;
-                display: block !important;
-                z-index: 1;
-            }
-            
-            .carousel.fade .carousel-item:first-child {
-                top: auto;
-                position: relative;
-            }
-            
-            .carousel.fade .carousel-item.active {
-                opacity: 1;
-                transition: opacity ease-in-out 3.5s;
-                z-index: 2;
-            }
-            /*End carousel styling*/
-            /**/
-            /*Start navbar styling*/
-            
-            .navbar-brand .collapse navbar-collapse ul,
-            li,
-            a {
-                color: #eae8e8;
-            }
-            
-            .navbar-brand .collapse navbar-collapse ul,
-            li,
-            a:hover {
-                color: #f9f102;
-                transition: 1s;
-            }
-            
-            .navbar-brand,
-            img {
-                width: 230px;
-            }
-            
-            .navbar:hover {
-                background-color: #3a3d42;
-                opacity: .7;
-                transition: 1.5s;
-            }
-            /*End navbar styling*/
-            /**/
-            /*Start navbar toggler styling*/
-            
-            .navbar-toggler {
-                border-style: solid;
-                border-color: #eae8e8;
-            }
-            
-            .navbar-inverse span.navbar-toggler-icon {
-                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-            }
-            /*End navbar togler styling*/
-            /**/
-            /*Start Search form styling*/
-            
-            .form-control {
-                border-style: solid;
-                border-width: 2px;
-                border-radius: 20px;
-                border-color: #eae8e8;
-                background-color: transparent;
-                max-width: 200px;
-            }
-            
-            .form-control:hover {
-                border-style: none;
-                border-radius: 20px;
-                background-color: #eae8e8;
-                transition: .7s;
-                max-width: 200px;
-            }
-            
-            .btnsearch {
-                background-image: url(../images/ic_search_black_18dp_2x.png);
-                background-repeat: no-repeat;
-                background-color: #f9f102;
-                height: 35px;
-                width: 34px;
-                border-style: solid;
-                border-radius: 20px;
-                margin: -42px;
-            }
-            
-            .btnsearch:hover {
-                background-color: #3fea15;
-                border-style: solid;
-                border-radius: 20px;
-                transition: .7s;
-            }
-            /*End Search form styling*/
-            /**/
-            /*Start carousel caption styling*/
-            
-            .carousel-caption {
-                color: #eae8e8;
-            }
-            
-            .carousel-caption:hover {
-                color: #f47234;
-                transition: 1s;
-            }
-            
-            h2,
-            .first-cap {
-                display: inline;
-                text-align: center;
-            }
-            
-            h2,
-            .second-cap {
-                display: inline;
-                text-align: center;
-                letter-spacing: 3px;
-            }
-            
-            h2,
-            .third-cap {
-                display: inline;
-                text-align: left;
-            }
-            
-            h2,
-            .fourth-cap {
-                display: inline;
-                text-align: left;
-            }
-            
-            .my-4 {
-                width: 200px;
-                background-color: #f9f102;
-            }
-            /*End carousel caption styling*/
-            /**/
-            /*Start footer styling*/
-            
-            footer {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                background-color: #3a3d42;
-                height: 85px;
-                text-align: center;
-                font-size: 10px;
-                /*                display: block;*/
-            }
-            
-            .social-likes_single-w,
-            .social-likes__widget.social-likes__widget_single {
-                margin-top: 5px;
-                margin-bottom: 5px;
-            }
-            /*End footer styling*/
-            /**/
-            /*Start services page styling*/
-            
-            #background-video {
-                position: fixed;
-                top: 40%;
-                left: 50%;
-                z-index: -100;
-                height: 100%;
-                transform: translateX(-50%) translateY(-50%);
-            }
-            
-            .service-cap {
-                background-color: #3a3d42;
-                opacity: .9;
-                padding-top: 20px;
-                margin-bottom: 80px;
-                color: #eae8e8;
-                border-radius: 20px;
-                margin-left: 0;
-            }
-            
-            .service-cap:hover {
-                background-color: #3a3d42;
-                opacity: .9;
-                color: #eae8e8;
-                border-radius: 20px;
-            }
-            
-            .services {
-                text-align: left;
-                padding-left: 20px;
-            }
-            
-            .call-to-action {
-                text-align: center;
-            }
-            
-            .btnevents {
-                background-image: url(../images/fast_forward.png);
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-                background-color: #f47234;
-                height: 40px;
-                width: 40px;
-                border-style: solid;
-                border-radius: 20px;
-                margin: -42px;
-            }
-            /*End servics page styling*/
-            /**/
-            /*Start contact page styling*/
-            
-            .container-fluid {
-                background-color: #eae8e8;
-                /*background-color: #888a8d;*/
-                width: 100%;
-                margin-top: 260px;
-                padding-top: 45px;
-                padding-bottom: 50px;
-            }
-            
-            .cps-contact-info {
-                background-color: #3a3d42;
-                color: black;
-                background-image: url(../images/speaker-1726130_1280.jpg);
-                background-repeat: no-repeat;
-                background-attachment: inherit;
-                background-size: auto;
-                background-position: center;
-            }
-            
-            .cps-contact-info,
-            h2 {
-                font-weight: 400;
-                text-align: center;
-                padding-top: 20px;
-            }
-            
-            .contact-number {
-                color: #eae8e8
-            }
-            
-            .subscriber-info {
-                background-color: #3a3d42;
-                color: #f47234;
-                background-image: url(../images/speaker-1726130_1280%20face%20right.jpg);
-                background-repeat: no-repeat;
-                background-attachment: inherit;
-                background-size: auto;
-                background-position: center;
-                padding-left: 90px;
-            }
-            
-            .subscribe {
-                background-color: #eae8e8;
-                transition: .7s;
-                color: #3a3d42;
-                text-align: center;
-                border-style: solid;
-                border-width: 2px;
-                border-color: #eae8e8;
-                border-radius: 20px;
-            }
-            
-            .subscribe:hover {
-                background-color: #f47234;
-                transition: .7s;
-                border-style: solid;
-                border-width: 2px;
-                border-radius: 20px;
-            }
-            
-            .subscriber-email {
-                transition: .7s;
-                color: #eae8e8;
-                border-radius: 20px;
-            }
-            
-            .subscriber-email:hover {
-                color: #eae8e8;
-                background-color: #eae8e8;
-                border-style: solid;
-                border-width: 2px;
-                border-radius: 20px;
-            }
-            
-            .modal-content {
-                text-align: center;
-                /*                background-color: #eae8e8;*/
-                /*                background-color: transparent;*/
-                background-color: #3a3d42;
-                background-image: url(../images/speaker-1742004_1280.jpg);
-                height: 220px;
-                background-repeat: no-repeat;
-                background-attachment: inherit;
-                background-size: cover;
-                background-position: center;
-                opacity: .9;
-                font-weight: 1000;
-            }
-            /*Start calendar styling
+}
+
+
+/*Start carousel styling*/
+
+.carousel.fade {
+    opacity: 1;
+}
+
+.carousel.fade .carousel-item {
+    transition: opacity ease-in-out 3.5s;
+    left: 0 !important;
+    opacity: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    display: block !important;
+    z-index: 1;
+}
+
+.carousel.fade .carousel-item:first-child {
+    top: auto;
+    position: relative;
+}
+
+.carousel.fade .carousel-item.active {
+    opacity: 1;
+    transition: opacity ease-in-out 3.5s;
+    z-index: 2;
+}
+
+
+/*End carousel styling*/
+
+
+/**/
+
+
+/*Start navbar styling*/
+
+.navbar-brand .collapse navbar-collapse ul,
+li,
+a {
+    color: #eae8e8;
+}
+
+.navbar-brand .collapse navbar-collapse ul,
+li,
+a:hover {
+    color: #f9f102;
+    transition: 1s;
+}
+
+.navbar-brand,
+img {
+    width: 230px;
+}
+
+.navbar:hover {
+    background-color: #3a3d42;
+    opacity: .7;
+    transition: 1.5s;
+}
+
+
+/*End navbar styling*/
+
+
+/**/
+
+
+/*Start navbar toggler styling*/
+
+.navbar-toggler {
+    border-style: solid;
+    border-color: #eae8e8;
+}
+
+.navbar-inverse span.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+/*End navbar togler styling*/
+
+
+/**/
+
+
+/*Start Search form styling*/
+
+.form-control {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    border-color: #eae8e8;
+    background-color: transparent;
+    max-width: 200px;
+}
+
+.form-control:hover {
+    border-style: none;
+    border-radius: 20px;
+    background-color: #eae8e8;
+    transition: .7s;
+    max-width: 200px;
+}
+
+.btnsearch {
+    background-image: url(../images/ic_search_black_18dp_2x.png);
+    background-repeat: no-repeat;
+    background-color: #f9f102;
+    height: 35px;
+    width: 34px;
+    border-style: solid;
+    border-radius: 20px;
+    margin: -42px;
+}
+
+.btnsearch:hover {
+    background-color: #3fea15;
+    border-style: solid;
+    border-radius: 20px;
+    transition: .7s;
+}
+
+
+/*End Search form styling*/
+
+
+/**/
+
+
+/*Start carousel caption styling*/
+
+.carousel-caption {
+    color: #eae8e8;
+}
+
+.carousel-caption:hover {
+    color: #f47234;
+    transition: 1s;
+}
+
+h2,
+.first-cap {
+    display: inline;
+    text-align: center;
+}
+
+h2,
+.second-cap {
+    display: inline;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+h2,
+.third-cap {
+    display: inline;
+    text-align: left;
+}
+
+h2,
+.fourth-cap {
+    display: inline;
+    text-align: left;
+}
+
+.my-4 {
+    width: 200px;
+    background-color: #f9f102;
+}
+
+
+/*End carousel caption styling*/
+
+
+/**/
+
+
+/*Start footer styling*/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #3a3d42;
+    height: 85px;
+    text-align: center;
+    font-size: 10px;
+    /*                display: block;*/
+}
+
+.social-likes_single-w,
+.social-likes__widget.social-likes__widget_single {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/*End footer styling*/
+
+
+/**/
+
+
+/*Start services page styling*/
+
+#background-video {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    z-index: -100;
+    height: 100%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.service-cap {
+    background-color: #3a3d42;
+    opacity: .9;
+    padding-top: 20px;
+    margin-bottom: 80px;
+    color: #eae8e8;
+    border-radius: 20px;
+    margin-left: 0;
+}
+
+.service-cap:hover {
+    background-color: #3a3d42;
+    opacity: .9;
+    color: #eae8e8;
+    border-radius: 20px;
+}
+
+.services {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.call-to-action {
+    text-align: center;
+}
+
+.btnevents {
+    background-image: url(../images/fast_forward.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #f47234;
+    height: 40px;
+    width: 40px;
+    border-style: solid;
+    border-radius: 20px;
+    margin: -42px;
+}
+
+
+/*End servics page styling*/
+
+
+/**/
+
+
+/*Start contact page styling*/
+
+.container-fluid {
+    background-color: #eae8e8;
+    /*background-color: #888a8d;*/
+    width: 100%;
+    margin-top: 260px;
+    padding-top: 45px;
+    padding-bottom: 50px;
+}
+
+.cps-contact-info {
+    background-color: #3a3d42;
+    color: black;
+    background-image: url(../images/speaker-1726130_1280.jpg);
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: auto;
+    background-position: center;
+}
+
+.cps-contact-info,
+h2 {
+    font-weight: 400;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.contact-number {
+    color: #eae8e8
+}
+
+.subscriber-info {
+    background-color: #3a3d42;
+    color: #f47234;
+    background-image: url(../images/speaker-1726130_1280%20face%20right.jpg);
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: auto;
+    background-position: center;
+    padding-left: 90px;
+}
+
+.subscribe {
+    background-color: #eae8e8;
+    transition: .7s;
+    color: #3a3d42;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #eae8e8;
+    border-radius: 20px;
+}
+
+.subscribe:hover {
+    background-color: #f47234;
+    transition: .7s;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+}
+
+.subscriber-email {
+    transition: .7s;
+    color: #eae8e8;
+    border-radius: 20px;
+}
+
+.subscriber-email:hover {
+    color: #eae8e8;
+    background-color: #eae8e8;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+}
+
+.modal-content {
+    text-align: center;
+    /*                background-color: #eae8e8;*/
+    /*                background-color: transparent;*/
+    background-color: #3a3d42;
+    background-image: url(../images/speaker-1742004_1280.jpg);
+    height: 220px;
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: cover;
+    background-position: center;
+    opacity: .9;
+    font-weight: 1000;
+}
+
+
+/*Start calendar styling
 Documentation for FullCalendar = https://fullcalendar.io/docs/*/
-            /**/
-            
-            #calendar {
-                background-color: #eae8e8;
-                height: 500px;
-                padding: 30px;
-                margin-top: 300px;
-                margin-bottom: 0px;
-                color: #3a3d42
-            }
-            /*End calendar styling*/
-            /**/
-            /**/
-            /*Media Queries*/
-            /**/
-            /* Moves search button icon, out of Search field, due to "insurmountable" conflict with footer element at smaller screen widths*/
-            
-            @media(max-width: 590px) {
-                .btnsearch {
-                    margin: 0;
-                }
-            }
-            /*Removes footer text from viewport*/
-            
-            @media(max-width: 540px) {
-                footer,
-                .footer p {
-                    padding-top: 100px;
-                    margin: 0;
-                    display: none;
-                }
-            }
-            /*Reduces size of logo*/
-            
-            @media(max-width: 990px) {
-                .navbar-brand,
-                img {
-                    width: 130px;
-                }
-            }
-            /*Cancels out background color on hover state*/
-            
-            @media(max-width: 990px) {
-                .navbar:hover {
-                    background-color: transparent;
-                    opacity: 1;
-                    transition: .1s;
-                }
-            }
-            /* SERVICES PAGE*/
-            
-            @media(max-width: 640px) {
-                #background-video {
-                    display: none;
-                }
-            }
-            
-            @media(max-width: 640px) {
-                .service-cap .services {
-                    background-color: #3a3d42;
-                    opacity: .9;
-                    width: 200px;
-                    margin-left: 50px;
-                    text-align: center;
-                    color: #eae8e8;
-                    border-radius: 20px;
-                }
-            }
-            
-            @media(max-width: 650px) {
-                .service-cap .services,
-                p .call-to-action {
-                    display: none
-                }
-            }
-            
-            @media(max-height: 640px) {
-                .service-cap .services,
-                p .call-to-action {
-                    display: none
-                }
-            }
-            /*CONTACT PAGE*/
-            
-            @media(max-width: 650px) {
-                .cps-contact-info {
-                    margin-bottom: 40px;
-                }
-            }
+
+
+/**/
+
+#calendar {
+    background-color: #eae8e8;
+    height: 500px;
+    padding: 30px;
+    margin-top: 300px;
+    margin-bottom: 0px;
+    color: #3a3d42
+}
+
+
+/*End calendar styling*/
+
+
+/**/
+
+
+/**/
+
+
+/*Media Queries*/
+
+
+/**/
+
+
+/* Moves search button icon, out of Search field, due to "insurmountable" conflict with footer element at smaller screen widths*/
+
+@media(max-width: 590px) {
+    .btnsearch {
+        margin: 0;
+    }
+}
+
+
+/*Removes footer text from viewport*/
+
+@media(max-width: 540px) {
+    footer,
+    .footer p {
+        padding-top: 100px;
+        margin: 0;
+        display: none;
+    }
+}
+
+
+/*Reduces size of logo*/
+
+@media(max-width: 990px) {
+    .navbar-brand,
+    img {
+        width: 130px;
+    }
+}
+
+
+/*Cancels out background color on hover state*/
+
+@media(max-width: 990px) {
+    .navbar:hover {
+        background-color: transparent;
+        opacity: 1;
+        transition: .1s;
+    }
+}
+
+
+/**/
+
+
+/* HOME PAGE*/
+
+/*
+@media(max-width: 500px) and @media(max-height: 640px) {
+    .carousel-caption {
+        width: 300px;
+    }
+}
+*/
+
+
+}
+
+/**/
+
+/* SERVICES PAGE*/
+@media(max-width: 640px) {
+    #background-video {
+        display: none;
+    }
+}
+@media(max-width: 640px) {
+    .service-cap .services {
+        background-color: #3a3d42;
+        opacity: .9;
+        width: 200px;
+        margin-left: 50px;
+        text-align: center;
+        color: #eae8e8;
+        border-radius: 20px;
+    }
+}
+@media(max-width: 650px) {
+    .service-cap .services,
+    p .call-to-action {
+        display: none
+    }
+}
+@media(max-height: 640px) {
+    .service-cap .services,
+    p .call-to-action {
+        display: none
+    }
+}
+
+/*CONTACT PAGE*/
+@media(max-width: 650px) {
+    .cps-contact-info {
+        margin-bottom: 40px;
+    }
+}
