@@ -14,6 +14,10 @@ body {
 
 /*Start carousel styling*/
 
+#carouselExampleSlidesOnly {
+    position: absolute;
+}
+
 .carousel.fade {
     opacity: 1;
 }
@@ -26,7 +30,7 @@ body {
     position: absolute;
     width: 100%;
     display: block !important;
-    z-index: 1;
+    z-index: 2;
 }
 
 .carousel.fade .carousel-item:first-child {
@@ -41,7 +45,7 @@ body {
 }
 
 
-/*End carousel styling*/
+/*End carousel-fade styling*/
 
 
 /**/
@@ -146,6 +150,7 @@ img {
 
 .carousel-caption {
     color: #eae8e8;
+    margin-bottom: 70px;
 }
 
 .carousel-caption:hover {
@@ -192,15 +197,17 @@ h2,
 
 /*Start footer styling*/
 
-footer {
-    position: absolute;
+footer,
+.footer {
+    position: fixed;
     bottom: 0;
     width: 100%;
     background-color: #3a3d42;
-    height: 85px;
+    height: 80px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     text-align: center;
     font-size: 10px;
-    /*                display: block;*/
 }
 
 .social-likes_single-w,
@@ -220,9 +227,8 @@ footer {
 
 #background-video {
     position: fixed;
-    top: 30%;
+    top: 50%;
     Left: 50%;
-    /*    height: 850px;*/
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
 }
@@ -318,6 +324,11 @@ h2 {
     padding-left: 90px;
 }
 
+.subscriber-info,
+label {
+    font-size: 20px;
+}
+
 .subscribe {
     background-color: #eae8e8;
     transition: .7s;
@@ -337,15 +348,8 @@ h2 {
     border-radius: 20px;
 }
 
-.subscriber-email {
-    transition: .7s;
-    color: #eae8e8;
-    border-radius: 20px;
-}
-
 .subscriber-email:hover {
-    color: #eae8e8;
-    background-color: #eae8e8;
+    color: #3a3d42;
     border-style: solid;
     border-width: 2px;
     border-radius: 20px;
@@ -363,7 +367,7 @@ h2 {
     background-size: cover;
     background-position: center;
     opacity: .9;
-    font-weight: 1000;
+    font-weight: 900;
 }
 
 
@@ -409,6 +413,8 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
 
 /*Removes footer text from viewport*/
 
+
+/*
 @media(max-width: 540px) {
     footer,
     .footer p {
@@ -416,7 +422,7 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
         margin: 0;
         display: none;
     }
-}
+}*/
 
 
 /*Reduces size of logo*/
@@ -509,3 +515,4 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
         margin-bottom: 40px;
     }
 }
+
