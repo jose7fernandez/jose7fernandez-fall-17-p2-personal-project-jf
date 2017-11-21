@@ -71,10 +71,11 @@ img {
     width: 230px;
 }
 
-.navbar:hover {
+.navbar ul:hover {
     background-color: #3a3d42;
+    border-radius: 20px;
     opacity: .7;
-    transition: 1.5s;
+    transition: 1s;
 }
 
 
@@ -198,16 +199,16 @@ h2,
 /*Start footer styling*/
 
 footer,
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+.fixed-bottom {
     background-color: #3a3d42;
-    height: 80px;
+    height: 90px;
     padding-top: 5px;
-    padding-bottom: 5px;
     text-align: center;
     font-size: 10px;
+}
+
+.footer-text {
+    color: #eae8e8;
 }
 
 .social-likes_single-w,
@@ -357,8 +358,6 @@ label {
 
 .modal-content {
     text-align: center;
-    /*                background-color: #eae8e8;*/
-    /*                background-color: transparent;*/
     background-color: #3a3d42;
     background-image: url(../images/speaker-1742004_1280.jpg);
     height: 220px;
@@ -396,7 +395,7 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
 /**/
 
 
-/*Media Queries*/
+/*M E D I A   Q U E R I E S*/
 
 
 /**/
@@ -409,20 +408,6 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
         margin: 0;
     }
 }
-
-
-/*Removes footer text from viewport*/
-
-
-/*
-@media(max-width: 540px) {
-    footer,
-    .footer p {
-        padding-top: 100px;
-        margin: 0;
-        display: none;
-    }
-}*/
 
 
 /*Reduces size of logo*/
@@ -449,25 +434,13 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
 }
 
 
-/*Cancels out background color on hover state*/
-
-@media(max-width: 990px) {
-    .navbar:hover {
-        background-color: transparent;
-        opacity: 1;
-        transition: .1s;
-    }
-}
-
-
-/**/
-
-
 /**/
 
 
 /* SERVICES PAGE*/
 
+
+/*
 @media(max-width: 650px) {
     #background-video {
         display: none;
@@ -479,6 +452,7 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
         display: none;
     }
 }
+*/
 
 @media(max-width: 640px) {
     .service-cap .services {
@@ -495,7 +469,7 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
 
 /*Removes p text from view*/
 
-@media(max-width: 650px) and (max-height: 640px) {
+@media(max-width: 785px) and (max-height: 640px) {
     .service-cap .services {
         display: none;
     }
@@ -515,4 +489,3 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
         margin-bottom: 40px;
     }
 }
-
