@@ -7,7 +7,7 @@ body {
     font-size: 1.1em;
     line-height: 1.3;
     background-color: #3a3d42;
-/*    background-color: blue;*/
+    /*    background-color: blue;*/
     font-family: 'Roboto', Arial, sans-serif;
 }
 
@@ -63,14 +63,12 @@ li,
 a {
     color: #eae8e8;
     padding-left: 5px;
-   
 }
 
 .navbar-brand .collapse navbar-collapse ul,
 li,
 a:hover {
     color: #f9f102;
-    
     transition: 1s;
 }
 
@@ -377,7 +375,6 @@ label {
     background-attachment: inherit;
     background-size: cover;
     background-position: center;
-    opacity: .9;
     font-weight: 900;
 }
 
@@ -421,12 +418,8 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
         width: 180px;
         transition: 1.2s;
     }
-    
-       /*Removes p text on Services page from view*/
-
-    .service-cap .services {
-        
-    }
+    /*Removes p text on Services page from view*/
+    .service-cap .services {}
 }
 
 
@@ -438,9 +431,7 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
         width: 165px;
         transition: 1.2s;
     }
-    
-      /*Removes p text on Services page from view*/
-
+    /*Removes p text on Services page from view*/
     .service-cap .services {
         display: none;
     }
@@ -453,22 +444,16 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
     .navbar-brand,
     img {
         width: 130px;
-        transition: 1.2s;}
-    
-     /*Removes p text on Services page from view*/
-
+        transition: 1.2s;
+    }
+    /*Removes p text on Services page from view*/
     .service-cap .services {
         display: none;
     }
-    
     /* Moves search button icon, out of Search field, due to "insurmountable" conflict with footer element at smaller screen widths*/
-
-
     .btnsearch {
         margin: 3px;
     }
-    
-  
 }
 
 
@@ -478,21 +463,16 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
     .navbar-brand,
     img {
         width: 130px;
-         transition: 1.2s;
+        transition: 1.2s;
     }
-   
     .carousel.fade .carousel-item {
         min-height: 600px;
-         transition: 1.2s;
+        transition: 1.2s;
     }
-    
-     /*Removes p text on Services page from view*/
-
+    /*Removes p text on Services page from view*/
     .service-cap .services {
         display: none;
     }
-    
-   
 }
 
 
@@ -504,7 +484,6 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
         width: 130px;
         transition: 1.2s;
     }
-    
     .carousel.fade .carousel-item {
         min-height: 600px;
     }
@@ -512,22 +491,19 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
     h2 {
         margin-bottom: -40px;
     }
-    
     /*Removes p text on Services page from view*/
-
     .service-cap .services {
         display: none;
     }
-    
     .navbar ul:hover {
         padding: 5px;
         opacity: .9;
-    transition: 1s;
+        transition: 1s;
     }
-    
 }
-    
-    /*CONTACT PAGE*/
+
+
+/*CONTACT PAGE*/
 
 @media(max-width: 650px) {
     .cps-contact-info {
@@ -536,10 +512,8 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
     .subscribe {
         margin-bottom: 5px;
     }
-    
     .container-fluid {
         margin-top: 200px;
         margin-bottom: 80px;
     }
 }
-
