@@ -157,7 +157,7 @@ img {
 
 .carousel-caption {
     color: #eae8e8;
-    margin-bottom: 50px;
+    margin-bottom: 120px;
 }
 
 .carousel-caption:hover {
@@ -168,7 +168,7 @@ img {
 .first-cap,
 h2 {
     display: inline;
-    text-align: center;
+    text-align: left;
 }
 
 .second-cap,
@@ -187,7 +187,7 @@ h2 {
 .fourth-cap,
 h2 {
     display: inline;
-    text-align: left;
+    text-align: center;
 }
 
 .my-4 {
@@ -247,9 +247,9 @@ footer,
     background-color: #3a3d42;
     opacity: .9;
     position: absolute;
-    padding-top: 20px;
-    margin-bottom: 80px;
-    margin-top: 30px;
+    padding-top: 10px;
+    margin-bottom: 100px;
+    margin-top: 10px;
     color: #eae8e8;
     border-radius: 20px;
     margin-left: 0;
@@ -412,10 +412,20 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
 
 /* Smaller than standard 960 (devices and browsers) */
 
+@media only screen and (max-width: 1170px) {
+    .navbar-brand,
+    img {
+        width: 185px;
+        transition: 1.2s;
+    }
+    /*Removes p text on Services page from view*/
+    .service-cap .services {}
+}
+
 @media only screen and (max-width: 959px) {
     .navbar-brand,
     img {
-        width: 180px;
+        width: 170px;
         transition: 1.2s;
     }
     /*Removes p text on Services page from view*/
@@ -428,7 +438,7 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
 @media only screen and (min-width: 768px) and (max-width: 959px) {
     .navbar-brand,
     img {
-        width: 165px;
+        width: 160px;
         transition: 1.2s;
     }
     /*Removes p text on Services page from view*/
@@ -498,7 +508,11 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
     }
     .fourth-cap,
     h2 {
-        margin-bottom: -20px;
+        margin-bottom: 40px;
+    }
+    .my-4 {
+        width: 120px;
+        background-color: #f9f102;
     }
     /*Services page*/
     /*Removes p text on Services page from view*/
