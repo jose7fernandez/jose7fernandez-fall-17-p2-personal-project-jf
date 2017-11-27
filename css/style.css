@@ -484,16 +484,37 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
         width: 130px;
         transition: 1.2s;
     }
+    /*HOME page*/
     .carousel.fade .carousel-item {
         min-height: 600px;
     }
+    .services-cap,
+    h2 {
+        font-size: 23px;
+    }
+    .services-cap,
+    h4 {
+        font-size: 20px;
+    }
     .fourth-cap,
     h2 {
-        margin-bottom: -40px;
+        margin-bottom: -20px;
     }
+    /*Services page*/
     /*Removes p text on Services page from view*/
     .service-cap .services {
         display: none;
+    }
+    .services-cap,
+    h3 {
+        font-size: 25px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .call-to-action {
+        font-size: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
     .navbar ul:hover {
         padding: 5px;
