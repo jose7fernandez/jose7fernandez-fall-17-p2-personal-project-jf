@@ -559,7 +559,6 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
         transition: 1s;
         opacity: 1.0;
         min-height: 140px;
-        padding-bottom: 60px;
     }
     .form-control {
         border-style: none;
