@@ -112,16 +112,14 @@ img {
 /*Start Search form styling*/
 
 .form-control {
-    border-style: solid;
-    border-width: 2px;
+    border: none;
     border-radius: 20px;
-    border-color: #eae8e8;
     background-color: transparent;
     max-width: 200px;
 }
 
 .form-control:hover {
-    border-style: none;
+    border: none;
     border-radius: 20px;
     background-color: #eae8e8;
     transition: .7s;
@@ -340,6 +338,24 @@ label {
     font-size: 20px;
 }
 
+.form-control,
+.subscriber-email {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #eae8e8;
+    color: #3a3d42;
+    border-radius: 20px;
+}
+
+.form-control,
+.subscriber-email:hover {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #eae8e8;
+    color: #3a3d42;
+    border-radius: 20px;
+}
+
 .subscribe {
     background-color: #eae8e8;
     transition: .7s;
@@ -535,7 +551,15 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
         border-radius: 20px;
         transition: 1s;
         opacity: 1.0;
-        padding: 5px;
+        min-height: 140px;
+    }
+    .navbar ul:hover {
+        background-color: #3a3d42;
+        border-radius: 20px;
+        transition: 1s;
+        opacity: 1.0;
+        min-height: 140px;
+        padding-bottom: 60px;
     }
     .form-control {
         border-style: none;
