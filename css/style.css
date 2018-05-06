@@ -1,5 +1,5 @@
 /* Inspiration = https://www.masterdynamic.com
-Source code for carusel fade action:
+Source code for carousel fade action:
 https://stackoverflow.com/questions/9526970/can-the-twitter-bootstrap-carousel-plugin-fade-in-and-out-on-slide-transition/*/
 
 body {
@@ -80,7 +80,6 @@ img {
 .navbar ul:hover {
     background-color: #3a3d42;
     border-radius: 20px;
-    opacity: .7;
     transition: 1s;
 }
 
@@ -467,6 +466,9 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
 /* All Mobile Sizes (devices and browser) */
 
 @media only screen and (max-width: 767px) {
+    #navbarSupportedContent li {
+        margin: 20px
+    }
     .navbar-brand,
     img {
         width: 130px;
@@ -516,11 +518,11 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
     }
     .services-cap,
     h2 {
-        font-size: 23px;
+        font-size: 20px;
     }
     .services-cap,
     h4 {
-        font-size: 20px;
+        font-size: 17px;
     }
     .fourth-cap,
     h2 {
@@ -557,8 +559,10 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
         background-color: #3a3d42;
         border-radius: 20px;
         transition: 1s;
-        opacity: 1.0;
         min-height: 140px;
+    }
+    .form-inline {
+        background-color: #3a3d42;
     }
     .form-control {
         border-style: none;
