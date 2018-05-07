@@ -549,21 +549,12 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
         padding-left: 5px;
         padding-right: 5px;
     }
-    .navbar ul {
+    #navbarSupportedContent {
         background-color: #3a3d42;
         border-radius: 20px;
         transition: 1s;
         opacity: 1.0;
         min-height: 140px;
-    }
-    .navbar ul:hover {
-        background-color: #3a3d42;
-        border-radius: 20px;
-        transition: 1s;
-        min-height: 140px;
-    }
-    .form-inline {
-        background-color: #3a3d42;
     }
     .form-control {
         border-style: none;
