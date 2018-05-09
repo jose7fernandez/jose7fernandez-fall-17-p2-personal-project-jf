@@ -430,13 +430,9 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
 
 /**/
 
-@-moz-document-https: //jose7fernandez.github.io/jose7fernandez-fall-17-p2-personal-project-jf/(){
-
-}
-
-/**/
 
 /* Smaller than standard 960 (devices and browsers) */
+
 @media only screen and (max-width: 1170px) {
     .navbar-brand,
     img {
@@ -444,9 +440,9 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
         transition: 1.2s;
     }
     /*Removes p text on Services page from view*/
-    
     .service-cap .services {}
 }
+
 @media only screen and (max-width: 959px) {
     .navbar-brand,
     img {
@@ -454,11 +450,12 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
         transition: 1.2s;
     }
     /*Removes p text on Services page from view*/
-    
     .service-cap .services {}
 }
 
+
 /* Tablet Portrait size to standard 960 (devices and browsers) */
+
 @media only screen and (min-width: 768px) and (max-width: 959px) {
     .navbar-brand,
     img {
@@ -466,55 +463,55 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
         transition: 1.2s;
     }
     /*Removes p text on Services page from view*/
-    
     .service-cap .services {
         display: none;
     }
 }
 
+
 /* All Mobile Sizes (devices and browser) */
+
 @media only screen and (max-width: 767px) {
     #navbarSupportedContent li {
         margin: 10px
     }
-    
     .navbar-brand,
     img {
         width: 130px;
         transition: 1.2s;
     }
     /*Removes p text on Services page from view*/
-    
     .service-cap .services {
         display: none;
     }
     /* Moves search button icon, out of Search field, due to "insurmountable" conflict with footer element at smaller screen widths*/
-    
     .btnsearch {
         margin: 3px;
     }
 }
 
+
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     .navbar-brand,
     img {
         width: 130px;
         transition: 1.2s;
     }
-    
     .carousel.fade .carousel-item {
         min-height: 600px;
         transition: 1.2s;
     }
     /*Removes p text on Services page from view*/
-    
     .service-cap .services {
         display: none;
     }
 }
 
+
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+
 @media only screen and (max-width: 479px) {
     .navbar-brand,
     img {
@@ -522,50 +519,41 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
         transition: 1.2s;
     }
     /*HOME page*/
-    
     .carousel.fade .carousel-item {
         min-height: 600px;
     }
-    
     .services-cap,
     h2 {
         font-size: 20px;
     }
-    
     .services-cap,
     h4 {
         font-size: 17px;
     }
-    
     .fourth-cap,
     h2 {
         margin-bottom: 40px;
     }
-    
     .my-4 {
         width: 120px;
         background-color: #f9f102;
     }
     /*Services page*/
     /*Removes p text on Services page from view*/
-    
     .service-cap .services {
         display: none;
     }
-    
     .services-cap,
     h3 {
         font-size: 25px;
         padding-left: 5px;
         padding-right: 5px;
     }
-    
     .call-to-action {
         font-size: 15px;
         padding-left: 5px;
         padding-right: 5px;
     }
-    
     #navbarSupportedContent {
         background-color: #3a3d42;
         border-radius: 20px;
@@ -573,7 +561,6 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
         opacity: 1.0;
         min-height: 140px;
     }
-    
     .form-control {
         border-style: none;
         border-radius: 20px;
@@ -583,16 +570,16 @@ Documentation for FullCalendar = https://fullcalendar.io/docs/*/
     }
 }
 
+
 /*CONTACT PAGE*/
+
 @media(max-width: 650px) {
     .cps-contact-info {
         margin-bottom: 40px;
     }
-    
     .subscribe {
         margin-bottom: 5px;
     }
-    
     .container-fluid {
         margin-top: 360px;
         margin-bottom: 80px;
